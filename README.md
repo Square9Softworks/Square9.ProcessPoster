@@ -20,16 +20,16 @@ Additionally, The Square9.ProcessPoster assembly can be built and used in existi
  ```
  using (var poster = new ProcessPoster(url, username, password))
  {
- 	// post a process
+     // post a process
  }
  ```
  
 * Call the **PostProcess** method on the **ProcessPoster** object using a **workflowId**, **portalId**, and some **file information**:
 
  ```
- var process = poster.PostProcess(workflowId, portalId, filePath)
+ var process = await poster.PostProcess(workflowId, portalId, filePath)
  // or...
- var process = poster.PostProcess(workflowId, portalId, fileBytes, fileName)
+ var process = await poster.PostProcess(workflowId, portalId, fileBytes, fileName)
  ```
 
 #### Enjoy!
